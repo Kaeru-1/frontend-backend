@@ -1,8 +1,8 @@
 /* Core Theme & Layout */
 body {
   font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-  background-color: #121212; /* Deep dark background */
-  color: #e0e0e0;           /* Soft white text for eye comfort */
+  background-color: #f5f5dc; /* Classic Beige Background */
+  color: #4a4a4a;           /* Soft dark brown/gray for readability */
   margin: 0;
   display: flex;
   justify-content: center;
@@ -12,70 +12,123 @@ body {
 .container {
   text-align: center;
   width: 100%;
-  max-width: 500px;
+  max-width: 550px;
 }
 
 h1 {
-  color: #ffffff;
-  margin-bottom: 30px;
-  font-weight: 600;
+  color: #6b5b4a; /* Deep earth tone */
+  margin-bottom: 10px;
+  font-weight: 700;
+  font-family: 'Georgia', serif; /* Serif adds a "lab/registry" feel */
 }
 
-/* Input Section - Improved Focus & Spacing */
+p.subtitle {
+  color: #8b7e66;
+  margin-bottom: 30px;
+  font-size: 0.9rem;
+}
+
+/* Input Section - Refined for Forms */
 .input-section {
-  margin-bottom: 30px;
+  background-color: #faf9f6; /* Off-white card */
+  padding: 25px;
+  border-radius: 12px;
+  border: 1px solid #e5e4d7;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
   display: flex;
-  gap: 10px; /* Modern spacing instead of margins */
+  flex-direction: column; /* Better for 3+ fields */
+  gap: 15px;
+  margin-bottom: 40px;
 }
 
-input {
-  flex: 1;
+.field-group {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  gap: 5px;
+}
+
+label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #8b7e66;
+}
+
+input, select {
   padding: 12px 16px;
   border-radius: 8px;
-  border: 1px solid #333;
-  background-color: #1e1e1e;
-  color: white;
+  border: 1px solid #d6d3c1;
+  background-color: #ffffff;
+  color: #4a4a4a;
   outline: none;
-  transition: border-color 0.2s;
+  font-size: 1rem;
+  transition: all 0.2s ease;
 }
 
-input:focus {
-  border-color: #af4c96; /* Highlights when typing */
+input:focus, select:focus {
+  border-color: #c2b280; /* Desert Sand highlight */
+  box-shadow: 0 0 0 3px rgba(194, 178, 128, 0.2);
 }
 
 button {
-  padding: 12px 24px;
+  padding: 14px 24px;
   cursor: pointer;
-  background-color: #af4c96;
+  background-color: #c2b280; /* Muted Gold/Beige accent */
   color: white;
   border: none;
   border-radius: 8px;
   font-weight: bold;
+  font-size: 1rem;
   transition: transform 0.1s, background-color 0.2s;
+  margin-top: 10px;
 }
 
 button:hover {
-  background-color: #af4c96;
+  background-color: #b0a172; /* Slightly darker on hover */
 }
 
 button:active {
-  transform: scale(0.96); /* Provides tactile feedback */
+  transform: scale(0.97);
 }
 
-/* Notes Section - Clean & Readable */
-.notes {
-  margin-top: 20px;
+/* Records Section */
+.records-container {
   display: flex;
   flex-direction: column;
   gap: 12px;
 }
 
-.note {
-  background: #1e1e1e; /* Slightly lighter than body for depth */
-  padding: 16px;
+.record-card {
+  background: #ffffff;
+  padding: 18px;
   text-align: left;
-  border-radius: 8px;
-  border-left: 4px solid #af4c96; /* Visual accent */
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-  transition: opacity 0.3s;
+  border-radius: 10px;
+  border-left: 5px solid #c2b280; /* Theme accent */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.record-info h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #5d5449;
+}
+
+.record-info p {
+  margin: 4px 0 0 0;
+  font-size: 0.9rem;
+  color: #8b7e66;
+}
+
+.record-tag {
+  font-size: 0.7rem;
+  background: #f5f5dc;
+  padding: 4px 8px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: bold;
+  color: #a39a82;
 }
