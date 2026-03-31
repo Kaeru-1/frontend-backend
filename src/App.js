@@ -40,7 +40,7 @@ fetchNotes();
 };
 useEffect(() => {
 fetchNotes();
-}, []);
+});
 return (
 <div className="container">
 <h1>Frontend vs Backend Demo</h1>
